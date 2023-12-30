@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<math.h>
+int main (){
+int a,i,b,c,d;
+scanf("%d",&a);
+d=a;
+c=a%10;
+i=1;
+while (i<=a ,a/=10)
+{
+i++;
+}b=d/pow(10,i-1);
+printf ("%d %d",b,c);
+return 0;
+} 

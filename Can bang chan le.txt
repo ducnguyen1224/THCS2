@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<math.h>
+int kt(long a){
+	long l=0,c=0;
+	while(a>0){
+		int d=a%10;
+		if(d%2==1) l++;
+		if(d%2==0) c++;
+		a=a/10;
+	}
+	if(l==c) return 1;
+	return 0;
+}
+int main(){
+		int n;
+		scanf("%d",&n);
+		long a,b=1;
+		while(n--){
+			b=b*10;
+		}
+		a=b/10;
+		int dem=0;
+		for(long i=a;i<b;i++){
+			if(kt(i)==1){
+				dem++;
+				printf("%ld ",i);
+			}
+			if(dem==10){
+				printf("\n");
+				dem=0;
+			}
+		
+	}
+}
+

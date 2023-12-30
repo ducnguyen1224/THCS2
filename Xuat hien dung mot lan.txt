@@ -1,0 +1,38 @@
+int main(){
+    long long mang[256],a=0,save[256],b,c=0,d,e=0,f,count[256]={0}, dem=0,dem1=0;
+    scanf("%lld",&f);
+    for(c=1;c<=f;c++){
+        scanf("%lld",&mang[c]);
+    }
+    for(c=1;c<=f;c++){
+        count[mang[c]]++;
+        if(count[mang[c]]==1){
+            save[e]=mang[c];
+            e++;
+        }
+    }
+    for(d=0;d<e;d++){
+        for(c=1;c<=f;c++){
+            if(save[d]==mang[c]){
+                dem++;
+            }
+        }
+        if(dem==1){
+            dem1++;
+        }
+        dem=0;
+    }
+    printf("%lld\n",dem1);
+    for(d=0;d<e;d++){
+        for(c=1;c<=f;c++){
+            if(save[d]==mang[c]){
+                dem++;
+            }
+        }
+        if(dem==1){
+            printf("%lld ",save[d]);
+        }
+        dem=0;
+    }
+return 0;
+}

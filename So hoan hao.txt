@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int x;
+	scanf("%d", &x);
+	int s = 0;
+	for (int i = 1; i < x; i++) 
+
+	if (x%i == 0)
+		s += i;
+	if (s == x)
+		printf("1", x);
+	else
+		printf("0", x);
+return 0;
+}

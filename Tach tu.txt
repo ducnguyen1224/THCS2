@@ -1,0 +1,16 @@
+#include<string.h>
+#include<stdio.h>
+
+int main() {
+	char str[100], *cut;
+	int count = 0;
+	fgets(str, 100, stdin);
+	
+	cut = strtok(str, " \n");
+	while (cut != NULL) {
+		printf("%s\n", cut);
+		cut = strtok(NULL, " ");
+	}
+	
+	return 0;
+}

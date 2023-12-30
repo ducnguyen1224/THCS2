@@ -1,0 +1,16 @@
+#include <stdio.h>
+int USCLN(int a, int b) {
+    if (b == 0) return a;
+    return USCLN(b, a % b);
+}
+int main() {
+	int N;
+	scanf("%d", &N);
+	while (N--)
+	{
+ int a, b;
+    scanf("%d%d", &a, &b);
+    printf("%d\n", USCLN(a, b));
+    }
+  
+}

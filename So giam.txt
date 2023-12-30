@@ -1,0 +1,26 @@
+#include<stdio.h>
+int kt(long long a){
+	   int e=a%10;
+	   a=a/10;
+	   int d=a%10;
+	   while(a>0){
+	   	if(e>=d) return 0;
+	   	e=d;
+	   	a=a/10;
+	   	d=a%10;
+	   }
+	   return 1;
+}
+int main(){
+	int t;
+	scanf("%d",&t);
+	while(t--){
+	
+	long a,b,dem=0;
+	scanf("%ld %ld",&a,&b);
+	for(long i=a;i<=b;i++){
+		if(kt(i)==1) dem++;
+	}
+	printf("%ld\n",dem);
+}
+}
